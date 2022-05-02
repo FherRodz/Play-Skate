@@ -10,7 +10,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  var _checkFlag = false;
+  var _isTricks = true;
+
+  void onTricksChanged(){
+    setState(() {
+      _isTricks = !_isTricks;
+    });
+    _isTricks ? print('The tricks list is visible') : print('The tricks list is NOT visible');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +34,12 @@ class _HomePageState extends State<HomePage> {
                 Image.asset('img/Play_Skate_Title.png'),
               ],
             ),
-            TrickListBox(),
-            FooterMenu(),
+            Visibility(
+              child: TrickListBox(),    //TODO: ADD SHOW/HIDE ANIMATION
+              visible: _isTricks,
+              maintainState: true,
+            ),
+            FooterMenu(onTricksChanged: onTricksChanged,),
           ],
         ),
       )

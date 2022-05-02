@@ -4,16 +4,14 @@ class SkateButton extends StatelessWidget {
   // const SkateButton({Key? key}) : super(key: key);
 
   final String _data;
-  final String _route;
+  final VoidCallback _onPress;
 
-  SkateButton(this._data, this._route);
+  SkateButton(this._data, this._onPress);
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-        onPressed: (){
-          print('move to route: ' + _route);
-        },
+        onPressed: _onPress,
         child: Text(_data),
         style: ElevatedButton.styleFrom(
           primary: Color.fromRGBO(26, 23, 28, 1.0),

@@ -110,7 +110,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		QUmD4VfLDaGhkDGqKDZ684kB88Y=
+		/q22hljfwsiIo/oSdQtgQzc0r74=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -118,15 +118,15 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		EQMndJHkVnsjHzpxCj2uYzABJS0=
+		UnP5col/y69gu7Rduq3l+SHf/jc=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		RSs63J22OOHICwh3VCaXLaxAAfA=
+		4uHv2fXnn61KLmMMIduBzW6Np/I=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
-		vKJkVIcw+LGHFnKJGwrQwCREv68=
+		1PRwW4V7QNUGPUqNLkmrtDVJnKk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
@@ -135,6 +135,10 @@
 		<key>Frameworks/App.framework/flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
 		zg6AEuOKM55BH/RKiXqZqsORXXE=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/fonts/Oswald-Regular.ttf</key>
+		<data>
+		HvNQg+aWSODwMPi1f0/cz+UO16U=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/img/Play_Skate_Title.png</key>
 		<data>
@@ -146,7 +150,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		vPhh1IVMoOyJvjwoiRfEX9eImAg=
+		/fWg4emUbAhhOKcUCVKTbfpgQW8=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -437,7 +441,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			bAmERAKPYpCBdWOeXltHS02XCXJwtKXxEEaF6FYChMI=
+			ztKtriM+RFMstgt5lxT+NTBcY92JfLmbjEzefbPuT0g=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -451,21 +455,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Pg/lH0fLQMs6ozRNE8YVFqxcJ7502RQ7SMs73fj+II=
+			TyXVQb2idGnQcvSyV1O8NnNxgFwRdow8TWnQFGBRI5k=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cigptFvX3aoVaHR/Qw0Gd3gq3ShNsmYi/XTd0NuB6S0=
+			hFvx8FtfuoBMt8/Tbk4NU9YLtup1qO4Ci87ifVCB0vE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zX4DZFvESy3Ue3y2JvUcTsv1Whl6t3JBYotHrBZfviE=
+			5qJn4IL+O0YJmCsemxD5YZ7pEBhx5RhQ5kLVSl1QNtQ=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
@@ -480,6 +484,13 @@
 			<key>hash2</key>
 			<data>
 			TDYN86u6z4Vu7PyuO9xbDd/JyDIkfDi8ygoVQ6BE5ys=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/fonts/Oswald-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xerNFWnp303U/TaXyjrhkKn2CMl717xh4l9wTe3PPxk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/img/Play_Skate_Title.png</key>
@@ -500,7 +511,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			e4zYGagGUtNwA5HRbrjV64Xl/rgLq4nKAID40dI/aLA=
+			5lQ5Z4t7sDWlGkNX0NN3lBJWY18PJ1iLuDkzOarmX1Q=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
