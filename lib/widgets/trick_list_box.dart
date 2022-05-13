@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play_skate/pages/skate_page.dart';
 import 'package:play_skate/widgets/hero_add_list_route.dart';
 import '/widgets/skate_button.dart';
 import '/widgets/list_item.dart';
@@ -35,6 +36,7 @@ class _TrickListBoxState extends State<TrickListBox> {
 
     void _getTrick(){
       print('get trick function');
+      Navigator.push(context, MaterialPageRoute(builder: (context) => SkatePage()));
     }
 
     return SizedBox(
