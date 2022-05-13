@@ -30,8 +30,9 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                Image.asset('img/Play_Skate_Title.png'),
+                Image.asset('img/Title.png'),
               ],
             ),
             Visibility(

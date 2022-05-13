@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play_skate/widgets/hero_add_list_route.dart';
 import '/widgets/skate_button.dart';
 import '/widgets/list_item.dart';
 import '/widgets/add_list_form.dart';
@@ -27,9 +28,9 @@ class _TrickListBoxState extends State<TrickListBox> {
 
     void _addList(){
       print('add list function');
-      setState(() {
-        _showAddForm = !_showAddForm;
-      });
+      Navigator.of(context).push(HeroAddListRoute(builder: (context) {
+        return const AddListForm();
+      }));
     }
 
     void _getTrick(){
@@ -42,7 +43,8 @@ class _TrickListBoxState extends State<TrickListBox> {
       child: Container(
         margin: const EdgeInsets.only(left: 50),
         decoration: const BoxDecoration(
-          color: Color.fromRGBO(65, 61, 67, 1.0),
+          // color: Color.fromRGBO(65, 61, 67, 1.0),
+          color: Colors.white,
           borderRadius: BorderRadius.only(
               topLeft: Radius.circular(10),
               bottomLeft: Radius.circular(10),
@@ -65,19 +67,26 @@ class _TrickListBoxState extends State<TrickListBox> {
             ),
             Container(
               height: height*.55,
-              child: ListView.builder(
-                shrinkWrap: true,
-                  itemCount: trickListItems.length,
+              child: Scrollbar(
+                isAlwaysShown: true,
+                scrollbarOrientation: ScrollbarOrientation.left,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                    itemCount: trickListItems.length,
 
-                  itemBuilder: (context, index){
-                    return ListItem(title: trickListItems[index],);
-                  }
+                    itemBuilder: (context, index){
+                      return ListItem(title: trickListItems[index],);
+                    }
+                ),
               ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                SkateButton('ADD LIST', _addList),
+                Hero(
+                    tag: 'addListForm',
+                    child: SkateButton('ADD LIST', _addList)
+                ),
                 SkateButton('GET TRICK', _getTrick),
               ],
             ),

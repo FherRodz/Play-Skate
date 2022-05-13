@@ -25,6 +25,7 @@ class _ListItemState extends State<ListItem> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Checkbox(
+                activeColor: Colors.black54,
                   value: _isChecked,
                   onChanged: (bool? value){
                     setState(() {
@@ -44,7 +45,7 @@ class _ListItemState extends State<ListItem> {
                   child: const Text(
                     'edit',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Colors.black,
                       fontFamily: 'Oswald',
                       fontSize: 14,
                       decoration: TextDecoration.underline

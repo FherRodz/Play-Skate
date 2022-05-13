@@ -15,7 +15,7 @@ class SkateButton extends StatelessWidget {
         child: Text(_data),
         style: ElevatedButton.styleFrom(
           primary: Color.fromRGBO(26, 23, 28, 1.0),
-          onPrimary: Colors.red,
+          onPrimary: Colors.white,
           textStyle: TextStyle(
             fontWeight: FontWeight.bold,
           ),

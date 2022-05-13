@@ -18,22 +18,3 @@ class ListHeading extends StatelessWidget {
     );
   }
 }
-
-
-
-
-// class ListHeading{
-//   final String title;
-//
-//   ListHeading(this.title)
-//
-//   Widget buildListHeading(BuildContext context){
-//     return Text(title,
-//       style: const TextStyle(
-//         color: Color.fromRGBO(0, 0, 0, 1.0),
-//         fontFamily: 'Oswald',
-//         fontSize: 18
-//       )
-//     );
-//   }
-// }

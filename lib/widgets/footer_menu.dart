@@ -20,7 +20,7 @@ class _FooterMenuState extends State<FooterMenu> {
     return Center(
       child: SizedBox(
         width: width-30,
-        height: 80,
+        height: 90,
         child: Container(
           margin: const EdgeInsets.only(bottom: 15),
           decoration: BoxDecoration(
@@ -38,14 +38,23 @@ class _FooterMenuState extends State<FooterMenu> {
                   color: Color.fromRGBO(162, 53, 39, 1.0),
                 ),
               ),
-              IconButton(
-                  onPressed: (){
-                    print('CLICKED! menu footer icon');
-                  },
-                  icon: Icon(Icons.menu),
-                tooltip: 'Open App Menu',
-                iconSize: 35,
-
+              Column(
+                children: [
+                  IconButton(
+                      onPressed: (){
+                        print('CLICKED! menu footer icon');
+                      },
+                      icon: Icon(Icons.menu),
+                    tooltip: 'Open App Menu',
+                    iconSize: 35,
+                  ),
+                  const Text('Menu',
+                    style: TextStyle(
+                      fontFamily: 'Oswald',
+                      fontSize: 16,
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 width: 1,
@@ -55,14 +64,24 @@ class _FooterMenuState extends State<FooterMenu> {
                   color: Color.fromRGBO(162, 53, 39, 1.0),
                 ),
               ),
-              IconButton(
-                  onPressed: widget.onTricksChanged,
-                  //     (){
-                  //   print('CLICKED! trick lists footer icon');
-                  // },
-                  icon: Icon(Icons.add_box),
-                  tooltip: 'Select Trick Lists',
-                iconSize: 35,
+              Column(
+                children: [
+                  IconButton(
+                      onPressed: widget.onTricksChanged,
+                      //     (){
+                      //   print('CLICKED! trick lists footer icon');
+                      // },
+                      icon: Icon(Icons.add_box),
+                      tooltip: 'Select Trick Lists',
+                    iconSize: 35,
+                  ),
+                  const Text('Trick Lists',
+                  style: TextStyle(
+                    fontFamily: 'Oswald',
+                    fontSize: 16
+                  ),
+                  )
+                ],
               ),
               SizedBox(
                 width: 1,
@@ -72,13 +91,23 @@ class _FooterMenuState extends State<FooterMenu> {
                   color: Color.fromRGBO(162, 53, 39, 1.0),
                 ),
               ),
-              IconButton(
-                  onPressed: (){
-                    print('CLICKED! log-out icon');
-                  },
-                  icon: Icon(Icons.logout),
-                  tooltip: 'Log-out of App',
-                iconSize: 35,
+              Column(
+                children: [
+                  IconButton(
+                      onPressed: (){
+                        print('CLICKED! log-out icon');
+                      },
+                      icon: Icon(Icons.logout),
+                      tooltip: 'Log-out of App',
+                    iconSize: 35,
+                  ),
+                  const Text('Sign-Out',
+                  style: TextStyle(
+                    fontFamily: 'Oswald',
+                    fontSize: 16
+                  ),
+                  )
+                ],
               ),
               SizedBox(
                 width: 1,

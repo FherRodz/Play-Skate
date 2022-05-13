@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/pages/home_page.dart';
+import '/pages/splash_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -14,8 +14,6 @@ class MyApp extends StatefulWidget{
 }
 
 class _MyAppState extends State<MyApp>{
-  var _checkFlag = false;
-
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +23,7 @@ class _MyAppState extends State<MyApp>{
       theme: ThemeData(
         primarySwatch: Colors.blue
       ),
-      home: HomePage()
+      home: SplashScreen(),
     );
   }
 

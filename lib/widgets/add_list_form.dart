@@ -7,47 +7,30 @@ class AddListForm extends StatefulWidget {
   State<AddListForm> createState() => _AddListFormState();
 }
 
-//TODO: FIGURE OUT FORM/MENU/CARD POPUP
 class _AddListFormState extends State<AddListForm> {
-  final _formKey = GlobalKey<FormState>();
-  final _trickList = <String>[];
-  String _name = '';
-
   @override
   Widget build(BuildContext context) {
-    return Form(
-      key: _formKey,
-        child: Container(
-          decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(10)
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+
+   return Hero(
+      tag: 'addListForm',
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(width*.12,height*.33,width*.12,height*.33),
+        child: SizedBox(
+          height: 100,
+          width: 100,
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+              border: Border.all(
+                width: 2
+              )
+            ),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              TextFormField(
-                initialValue: 'Enter List Name',
-                validator: (value){
-                  if (value == null || value.isEmpty){
-                    return 'Please Enter Some Text';
-                  }
-                  _name = value;
-                  return null;
-                },
-              ),
-              ElevatedButton(
-                  onPressed: (){
-                    if (_formKey.currentState!.validate()) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('List with name ${_name}created')),
-                      );
-                    }
-                  },
-                  child: Text('FINISH'),
-              ),
-            ],
-          ),
-        )
+        ),
+      )
     );
   }
 }
