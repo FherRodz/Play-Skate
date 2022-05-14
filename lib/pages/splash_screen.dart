@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play_skate/pages/signIn_page.dart';
 import '/widgets/skate_button.dart';
 import 'home_page.dart';
 
@@ -41,6 +42,7 @@ class SplashScreen extends StatelessWidget {
               TextButton(
                   onPressed: (){
                     print('sign-in/register');
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => SignInPage()));
                   },
                   child: Text('Sign-in/Register'),
               ),
