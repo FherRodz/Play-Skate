@@ -13,6 +13,7 @@ class _RegisterFormState extends State<RegisterForm> {
   bool _isPwVisible = false;
   bool _isPwVisible2 = false;
 
+  String _password1 = '';
 
   void _showHidePW(){
     setState(() {
@@ -43,6 +44,9 @@ class _RegisterFormState extends State<RegisterForm> {
                 if (value == null || value.isEmpty) {
                   return 'Please enter your username.';
                 }
+                else if (value.length < 6){
+                  return 'Username must be at least 6 characters';
+                }
                 return null;
               },
             ),
@@ -62,6 +66,10 @@ class _RegisterFormState extends State<RegisterForm> {
                 if (value == null || value.isEmpty) {
                   return 'Please enter your password.';
                 }
+                else if (value.length < 12){
+                  return 'Password must be at least 12 characters';
+                }
+                _password1 = value;
                 return null;
               },
             ),
@@ -80,6 +88,12 @@ class _RegisterFormState extends State<RegisterForm> {
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'Please enter your password.';
+                }
+                else if (value.length < 12){
+                  return 'Password must be at least 12 characters';
+                }
+                else if (value.compareTo(_password1) != 0){
+                  return 'Passwords must match';
                 }
                 return null;
               },

@@ -36,6 +36,9 @@ class _SignInFormState extends State<SignInForm> {
                 if (value == null || value.isEmpty) {
                   return 'Please enter your username.';
                 }
+                else if (value.length < 6){
+                  return 'Username must be at least 6 characters';
+                }
                 return null;
               },
             ),
@@ -54,6 +57,9 @@ class _SignInFormState extends State<SignInForm> {
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'Please enter your password.';
+                }
+                else if (value.length < 12){
+                  return 'Password must be at least 12 characters';
                 }
                 return null;
               },
