@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:play_skate/pages/signIn_page.dart';
+import 'package:play_skate/widgets/hero_menu_route.dart';
+import 'package:play_skate/widgets/pop_up_menu.dart';
 
 class FooterMenu extends StatefulWidget {
   // const FooterMenu({Key? key}) : super(key: key);
@@ -37,6 +39,12 @@ class _FooterMenuState extends State<FooterMenu> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
 
+    void _popUpMenu(){
+      Navigator.of(context).push(HeroMenuRoute(builder: (context) {
+        return const PopUpMenu();
+      }));
+    }
+
     return Center(
       child: SizedBox(
         width: width-30,
@@ -60,13 +68,17 @@ class _FooterMenuState extends State<FooterMenu> {
               ),
               Column(
                 children: [
-                  IconButton(
-                      onPressed: (){
-                        print('CLICKED! menu footer icon');
-                      },
-                      icon: Icon(Icons.menu),
-                    tooltip: 'Open App Menu',
-                    iconSize: 35,
+                  Hero(
+                    tag: 'popUpMenu',
+                    child: IconButton(
+                        onPressed: (){
+                          print('CLICKED! menu footer icon');
+                          _popUpMenu();
+                        },
+                        icon: Icon(Icons.menu),
+                      tooltip: 'Open App Menu',
+                      iconSize: 35,
+                    ),
                   ),
                   const Text('Menu',
                     style: TextStyle(
