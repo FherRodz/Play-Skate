@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:play_skate/pages/news_page.dart';
 import 'package:play_skate/pages/profile_page.dart';
 
 class PopUpMenu extends StatefulWidget {
@@ -46,6 +47,7 @@ class _PopUpMenuState extends State<PopUpMenu> {
                   ElevatedButton(
                       onPressed: (){
                         print('news button');
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
                       },
                       child: const Text('News',
                         style: TextStyle(
