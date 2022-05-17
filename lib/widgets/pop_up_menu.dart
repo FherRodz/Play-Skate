@@ -32,8 +32,13 @@ class _PopUpMenuState extends State<PopUpMenu> {
                   )
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.black,
+                      onPrimary: Colors.white
+                    ),
                       onPressed: (){
                         Navigator.push(context, MaterialPageRoute(builder: (context) => ProfilePage()));
                       },
@@ -44,7 +49,18 @@ class _PopUpMenuState extends State<PopUpMenu> {
                         ),
                       ),
                   ),
+                  SizedBox(
+                    width: 200,
+                    height: 1,
+                    child: Container(
+                      color: Colors.black45,
+                    ),
+                  ),
                   ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        primary: Colors.black,
+                        onPrimary: Colors.white
+                    ),
                       onPressed: (){
                         print('news button');
                         Navigator.push(context, MaterialPageRoute(builder: (context) => NewsPage()));
@@ -56,17 +72,35 @@ class _PopUpMenuState extends State<PopUpMenu> {
                         ),
                       ),
                   ),
-                  ElevatedButton(
-                      onPressed: (){
-                        print('Map button');
-                      },
-                      child: const Text('Map',
-                        style: TextStyle(
-                          fontFamily: 'Oswald',
-                          fontSize: 24
-                        ),
-                      )
+                  SizedBox(
+                    width: 200,
+                    height: 1,
+                    child: Container(
+                      color: Colors.black45,
+                    ),
                   ),
+                  // ElevatedButton(
+                  //     style: ElevatedButton.styleFrom(
+                  //         primary: Colors.black,
+                  //         onPrimary: Colors.white
+                  //     ),
+                  //     onPressed: (){
+                  //       print('Map button');
+                  //     },
+                  //     child: const Text('Map',
+                  //       style: TextStyle(
+                  //         fontFamily: 'Oswald',
+                  //         fontSize: 24
+                  //       ),
+                  //     )
+                  // ),
+                  // SizedBox(
+                  //   width: 200,
+                  //   height: 1,
+                  //   child: Container(
+                  //     color: Colors.black45,
+                  //   ),
+                  // ),
                 ],
               ),
             ),

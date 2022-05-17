@@ -3,7 +3,7 @@ import 'package:play_skate/pages/skate_page.dart';
 import 'package:play_skate/widgets/hero_add_list_route.dart';
 import '/widgets/skate_button.dart';
 import '/widgets/list_item.dart';
-import '/widgets/add_list_form.dart';
+import '/widgets/add_list_pop_up.dart';
 
 
 class TrickListBox extends StatefulWidget {
@@ -14,6 +14,8 @@ class TrickListBox extends StatefulWidget {
 }
 
 class _TrickListBoxState extends State<TrickListBox> {
+  final List<String> trickListItems = ['Basic tricks', 'Flat ground tricks', 'Flip tricks', 'Ledge tricks'];
+
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -21,16 +23,22 @@ class _TrickListBoxState extends State<TrickListBox> {
 
     var _showAddForm = false;
 
-    final trickListItems = List<String>.generate(
-      11,
-        (int i) => 'Trick list ${i+1}'
-    );
+    // final trickListItems = List<String>.generate(
+    //   11,
+    //     (int i) => 'Trick list ${i+1}'
+    // );
 
+
+    void _updateList(String trick){
+      setState(() {
+        trickListItems.add(trick);
+      });
+    }
 
     void _addList(){
       print('add list function');
       Navigator.of(context).push(HeroAddListRoute(builder: (context) {
-        return const AddListForm();
+        return AddListPopUp(trickListItems, _updateList);
       }));
     }
 
